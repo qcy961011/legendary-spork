@@ -5,11 +5,27 @@ import java.util.List;
 
 public class Tree_Solution {
 
+	/**
+	 * 二叉树还原入口方法
+	 * @param pre
+	 * @param in
+	 * @return
+	 */
 	public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
 		TreeNode root = reConstrcuBinaryTree(pre, 0, pre.length - 1, in, 0, in.length - 1);
 		return root;
 	}
 
+	/**
+	 * 将二叉树还原，将
+	 * @param pre
+	 * @param startPre
+	 * @param endPre
+	 * @param in
+	 * @param startIn
+	 * @param endIn
+	 * @return
+	 */
 	private TreeNode reConstrcuBinaryTree(int[] pre, int startPre, int endPre, int[] in, int startIn, int endIn) {
 		if (startPre > endPre || startIn > endIn) {
 			return null;
